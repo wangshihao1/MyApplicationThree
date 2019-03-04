@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?actionBarSize"
+        app:navigationIcon="@mipmap/ic_launcher_round"
+        app:title="标题"/>
+    <RelativeLayout
+        android:id="@+id/shouye_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:id="@+id/btn_pzsh"
+                    android:background="@drawable/circle_shape"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="#FFF"
+                    android:text="品质生活"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+                <Button
+                    android:id="@+id/btn_mlss"
+                    android:background="@drawable/circle_shape"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="#FFF"
+                    android:text="魔力时尚"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+                <Button
+                    android:id="@+id/btn_rxxp"
+                    android:background="@drawable/circle_shape"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="#FFF"
+                    android:text="热销新品"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <com.recker.flybanner.FlyBanner
+                android:id="@+id/fly_banner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/colorPrimaryDark"></com.recker.flybanner.FlyBanner>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pzsh_rv"
+                ></android.support.v7.widget.RecyclerView>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mlss_rv"
+                ></android.support.v7.widget.RecyclerView>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rxxp_rv"
+                ></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/webview_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        >
+       <WebView
+           android:id="@+id/web_view_shop"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+
+           ></WebView>
+    </RelativeLayout>
+
+
+
+</LinearLayout>
